@@ -1,0 +1,15 @@
+{
+	"name": "AzureDataExplorer3",
+	"properties": {
+		"annotations": [],
+		"type": "AzureDataExplorer",
+		"typeProperties": {
+			"endpoint": "https://schughtestkusto.eastus.kusto.windows.net",
+			"database": "schughTestDB",
+			"credential": {
+				"referenceName": "schugh_kusto_test_creds",
+				"type": "CredentialReference"
+			}
+		}
+	}
+}

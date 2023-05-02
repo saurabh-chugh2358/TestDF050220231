@@ -1,0 +1,12 @@
+{
+	"name": "AzureDataExplorer2",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureDataExplorer",
+		"typeProperties": {
+			"endpoint": "https://schughtestkusto.eastus.kusto.windows.net",
+			"database": "schughTestDB"
+		}
+	}
+}

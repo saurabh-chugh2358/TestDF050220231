@@ -1,0 +1,19 @@
+{
+	"name": "schugh-df1",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned,UserAssigned",
+		"principalId": "e9a1731d-da87-4a9d-a0bd-f1918b29ee46",
+		"tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
+		"userAssignedIdentities": {
+			"/subscriptions/d3bb3b2e-9a7e-4194-9960-5171bd192117/resourcegroups/sochatRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/Sochat_UAMI1": {
+				"clientId": "8789f9ba-6695-4ace-8dc3-e1a560c52f9a",
+				"principalId": "6dbafeed-26af-45f9-8bfd-87f1e72b966a"
+			},
+			"/subscriptions/d3bb3b2e-9a7e-4194-9960-5171bd192117/resourcegroups/saurabhchugh-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/schugh_UAM1": {
+				"clientId": "34cca494-2616-4954-b897-8f5d69e74e5f",
+				"principalId": "e8dc1fdf-d5ee-4884-8098-99fe6e2bda1a"
+			}
+		}
+	}
+}

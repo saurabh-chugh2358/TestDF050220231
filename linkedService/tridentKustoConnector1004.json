@@ -1,0 +1,16 @@
+{
+	"name": "tridentKustoConnector1004",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureDataExplorer",
+		"typeProperties": {
+			"endpoint": "https://jpw7o10041620351905247.eastus2.kusto.windows.net",
+			"database": "7beb189a3b2d492faa44eabdfb5993a8",
+			"credential": {
+				"referenceName": "schugh_kusto_test_creds",
+				"type": "CredentialReference"
+			}
+		}
+	}
+}

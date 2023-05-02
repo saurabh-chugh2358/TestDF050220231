@@ -1,0 +1,166 @@
+{
+	"name": "AzureSqlTable1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "EmpID",
+				"type": "varchar"
+			},
+			{
+				"name": "NamePrefix",
+				"type": "varchar"
+			},
+			{
+				"name": "FirstName",
+				"type": "varchar"
+			},
+			{
+				"name": "MiddleInitial",
+				"type": "varchar"
+			},
+			{
+				"name": "LastName",
+				"type": "varchar"
+			},
+			{
+				"name": "Gender",
+				"type": "varchar"
+			},
+			{
+				"name": "EMail",
+				"type": "varchar"
+			},
+			{
+				"name": "FatherName",
+				"type": "varchar"
+			},
+			{
+				"name": "MotherName",
+				"type": "varchar"
+			},
+			{
+				"name": "MotherMaidenName",
+				"type": "varchar"
+			},
+			{
+				"name": "DateofBirth",
+				"type": "varchar"
+			},
+			{
+				"name": "TimeofBirth",
+				"type": "varchar"
+			},
+			{
+				"name": "AgeinYrs",
+				"type": "varchar"
+			},
+			{
+				"name": "WeightinKgs",
+				"type": "varchar"
+			},
+			{
+				"name": "DateofJoining",
+				"type": "varchar"
+			},
+			{
+				"name": "QuarterofJoining",
+				"type": "varchar"
+			},
+			{
+				"name": "HalfofJoining",
+				"type": "varchar"
+			},
+			{
+				"name": "YearofJoining",
+				"type": "varchar"
+			},
+			{
+				"name": "MonthofJoining",
+				"type": "varchar"
+			},
+			{
+				"name": "MonthNameofJoining",
+				"type": "varchar"
+			},
+			{
+				"name": "ShortMonth",
+				"type": "varchar"
+			},
+			{
+				"name": "DayofJoining",
+				"type": "varchar"
+			},
+			{
+				"name": "DOWofJoining",
+				"type": "varchar"
+			},
+			{
+				"name": "ShortDOW",
+				"type": "varchar"
+			},
+			{
+				"name": "AgeinCompanyYrs",
+				"type": "varchar"
+			},
+			{
+				"name": "Salary",
+				"type": "varchar"
+			},
+			{
+				"name": "LastHike",
+				"type": "varchar"
+			},
+			{
+				"name": "SSN",
+				"type": "varchar"
+			},
+			{
+				"name": "PhoneNo",
+				"type": "varchar"
+			},
+			{
+				"name": "PlaceName",
+				"type": "varchar"
+			},
+			{
+				"name": "County",
+				"type": "varchar"
+			},
+			{
+				"name": "City",
+				"type": "varchar"
+			},
+			{
+				"name": "State",
+				"type": "varchar"
+			},
+			{
+				"name": "Zip",
+				"type": "varchar"
+			},
+			{
+				"name": "Region",
+				"type": "varchar"
+			},
+			{
+				"name": "UserName",
+				"type": "varchar"
+			},
+			{
+				"name": "Password",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Employees"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

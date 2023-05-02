@@ -1,0 +1,57 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "schugh-df1"
+		},
+		"AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"value": ""
+		},
+		"AzureSqlDatabase1_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabase2_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabase3_connectionString": {
+			"value": ""
+		},
+		"CosmosDb1_connectionString": {
+			"value": ""
+		},
+		"CosmosDb2_connectionString": {
+			"value": ""
+		},
+		"CosmosDb3_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorage2_connectionString": {
+			"value": ""
+		},
+		"AzureDataExplorer2_properties_typeProperties_endpoint": {
+			"value": "https://schughtestkusto.eastus.kusto.windows.net"
+		},
+		"AzureDataExplorer2_properties_typeProperties_database": {
+			"value": "schughTestDB"
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://schughblob.dfs.core.windows.net"
+		},
+		"tridentKustoConnector1004_properties_typeProperties_endpoint": {
+			"value": "https://jpw7o10041620351905247.eastus2.kusto.windows.net"
+		},
+		"tridentKustoConnector1004_properties_typeProperties_database": {
+			"value": "7beb189a3b2d492faa44eabdfb5993a8"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}

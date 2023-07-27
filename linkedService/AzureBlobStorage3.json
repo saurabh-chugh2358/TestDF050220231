@@ -5,8 +5,8 @@
 		"annotations": [],
 		"type": "AzureBlobStorage",
 		"typeProperties": {
-			"connectionString": "DefaultEndpointsProtocol=https;AccountName=schughblob;EndpointSuffix=core.windows.net;",
-			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDhBQUZCNEQ4LTI1RTMtNEMyMC05QkM1LTIyNzNBMjU0MEE5Nl9kOWI0MDA0My04MmRiLTQ0MjItYmY0MC0zZTM4MzJlZGRiZjYiDQp9"
+			"sasUri": "https://schughblobgen2.blob.core.windows.net/",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDhBQUZCNEQ4LTI1RTMtNEMyMC05QkM1LTIyNzNBMjU0MEE5Nl85YzYxYjEyMS0xZTM2LTRmNGQtYmY1ZC1lNGVlNzVkMDE1ODQiDQp9"
 		}
 	}
 }

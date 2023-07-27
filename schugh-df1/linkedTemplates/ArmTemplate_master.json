@@ -11,6 +11,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage1'"
 		},
+		"AzureBlobStorage2_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage2'"
+		},
 		"AzureDataLakeStorage1_accountKey": {
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage1'"
@@ -39,9 +43,9 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'CosmosDb3'"
 		},
-		"AzureBlobStorage2_connectionString": {
+		"AzureBlobStorage3_sasUri": {
 			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage2'"
+			"metadata": "Secure string for 'sasUri' of 'AzureBlobStorage3'"
 		},
 		"AzureDataExplorer2_properties_typeProperties_endpoint": {
 			"type": "string",
@@ -51,9 +55,25 @@
 			"type": "string",
 			"defaultValue": "schughTestDB"
 		},
+		"AzureDataExplorer3_properties_typeProperties_endpoint": {
+			"type": "string",
+			"defaultValue": "https://schughtestkusto.eastus.kusto.windows.net"
+		},
+		"AzureDataExplorer3_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "schughTestDB"
+		},
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://schughblob.dfs.core.windows.net"
+		},
+		"AzureDataLakeStorage2_sasUri": {
+			"type": "secureString",
+			"metadata": "Secure string for 'sasUri' of 'AzureDataLakeStorage2'"
+		},
+		"AzureDataLakeStorage3_sasUri": {
+			"type": "secureString",
+			"metadata": "Secure string for 'sasUri' of 'AzureDataLakeStorage3'"
 		},
 		"tridentKustoConnector1004_properties_typeProperties_endpoint": {
 			"type": "string",
@@ -93,6 +113,9 @@
 					"AzureBlobStorage1_connectionString": {
 						"value": "[parameters('AzureBlobStorage1_connectionString')]"
 					},
+					"AzureBlobStorage2_connectionString": {
+						"value": "[parameters('AzureBlobStorage2_connectionString')]"
+					},
 					"AzureDataLakeStorage1_accountKey": {
 						"value": "[parameters('AzureDataLakeStorage1_accountKey')]"
 					},
@@ -114,8 +137,8 @@
 					"CosmosDb3_connectionString": {
 						"value": "[parameters('CosmosDb3_connectionString')]"
 					},
-					"AzureBlobStorage2_connectionString": {
-						"value": "[parameters('AzureBlobStorage2_connectionString')]"
+					"AzureBlobStorage3_sasUri": {
+						"value": "[parameters('AzureBlobStorage3_sasUri')]"
 					},
 					"AzureDataExplorer2_properties_typeProperties_endpoint": {
 						"value": "[parameters('AzureDataExplorer2_properties_typeProperties_endpoint')]"
@@ -125,6 +148,12 @@
 					},
 					"AzureDataLakeStorage1_properties_typeProperties_url": {
 						"value": "[parameters('AzureDataLakeStorage1_properties_typeProperties_url')]"
+					},
+					"AzureDataLakeStorage2_sasUri": {
+						"value": "[parameters('AzureDataLakeStorage2_sasUri')]"
+					},
+					"AzureDataLakeStorage3_sasUri": {
+						"value": "[parameters('AzureDataLakeStorage3_sasUri')]"
 					}
 				}
 			},
@@ -144,6 +173,12 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
+					"AzureDataExplorer3_properties_typeProperties_endpoint": {
+						"value": "[parameters('AzureDataExplorer3_properties_typeProperties_endpoint')]"
+					},
+					"AzureDataExplorer3_properties_typeProperties_database": {
+						"value": "[parameters('AzureDataExplorer3_properties_typeProperties_database')]"
+					},
 					"tridentKustoConnector1004_properties_typeProperties_endpoint": {
 						"value": "[parameters('tridentKustoConnector1004_properties_typeProperties_endpoint')]"
 					},
@@ -154,6 +189,26 @@
 			},
 			"dependsOn": [
 				"[resourceId('Microsoft.Resources/deployments', 'schugh-df1_ArmTemplate_0')]"
+			]
+		},
+		{
+			"name": "schugh-df1_ArmTemplate_2",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_2.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'schugh-df1_ArmTemplate_1')]"
 			]
 		}
 	]

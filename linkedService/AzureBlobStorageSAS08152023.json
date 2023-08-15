@@ -5,8 +5,8 @@
 		"annotations": [],
 		"type": "AzureBlobStorage",
 		"typeProperties": {
-			"sasUri": "https://schughblob.blob.core.windows.net/test04212022/eployee-sample-100/10%20Records.csv",
-			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDhBQUZCNEQ4LTI1RTMtNEMyMC05QkM1LTIyNzNBMjU0MEE5Nl8zNzkwNWQ2Ni1iNDcxLTRjM2EtOTg0YS05MjBjNDM1NDZiNjAiDQp9"
+			"sasUri": "https://schughblob.blob.core.windows.net/",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDhBQUZCNEQ4LTI1RTMtNEMyMC05QkM1LTIyNzNBMjU0MEE5Nl9jODg2MmY4Yy00ODEwLTRlM2YtOTVlOS1lY2UwMjM0M2MzMmEiDQp9"
 		}
 	}
 }

@@ -7,6 +7,10 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "schugh-df1"
 		},
+		"AzureBlobStorage08152023_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage08152023'"
+		},
 		"AzureBlobStorage1_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage1'"
@@ -117,6 +121,9 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					},
+					"AzureBlobStorage08152023_connectionString": {
+						"value": "[parameters('AzureBlobStorage08152023_connectionString')]"
 					},
 					"AzureBlobStorage1_connectionString": {
 						"value": "[parameters('AzureBlobStorage1_connectionString')]"

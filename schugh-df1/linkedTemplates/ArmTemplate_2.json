@@ -13,6 +13,42 @@
 	},
 	"resources": [
 		{
+			"name": "[concat(parameters('factoryName'), '/AzureDataExplorerTable1')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "tridentKustoConnector1004",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "AzureDataExplorerTable",
+				"schema": [],
+				"typeProperties": {
+					"table": "Employee"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/AzureDataExplorerTable908')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "tridentKustoConnector1004",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "AzureDataExplorerTable",
+				"schema": [],
+				"typeProperties": {
+					"table": "Employee"
+				}
+			},
+			"dependsOn": []
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/KustoLookUp')]",
 			"type": "Microsoft.DataFactory/factories/pipelines",
 			"apiVersion": "2018-06-01",
@@ -51,7 +87,9 @@
 				"annotations": [],
 				"lastPublishTime": "2023-01-27T04:29:23Z"
 			},
-			"dependsOn": []
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/datasets/AzureDataExplorerTable1')]"
+			]
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/adx_source')]",
@@ -121,7 +159,9 @@
 				"annotations": [],
 				"lastPublishTime": "2023-01-26T06:00:34Z"
 			},
-			"dependsOn": []
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/datasets/AzureDataExplorerTable1')]"
+			]
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/adx_test_1020')]",
@@ -222,7 +262,9 @@
 				"annotations": [],
 				"lastPublishTime": "2023-01-25T23:43:29Z"
 			},
-			"dependsOn": []
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/datasets/AzureDataExplorerTable1')]"
+			]
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/adx_test_pipeline')]",
@@ -290,7 +332,9 @@
 				"annotations": [],
 				"lastPublishTime": "2022-08-17T20:23:30Z"
 			},
-			"dependsOn": []
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/datasets/AzureDataExplorerTable1')]"
+			]
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/emp_pipeline')]",
@@ -399,7 +443,9 @@
 				"annotations": [],
 				"lastPublishTime": "2022-12-06T00:24:28Z"
 			},
-			"dependsOn": []
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/datasets/AzureDataExplorerTable1')]"
+			]
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/kustoToKusto')]",
@@ -461,7 +507,9 @@
 				"annotations": [],
 				"lastPublishTime": "2023-01-26T20:00:58Z"
 			},
-			"dependsOn": []
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/datasets/AzureDataExplorerTable1')]"
+			]
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/kustoToKusto2')]",
@@ -523,7 +571,9 @@
 				"annotations": [],
 				"lastPublishTime": "2023-01-26T20:08:55Z"
 			},
-			"dependsOn": []
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/datasets/AzureDataExplorerTable1')]"
+			]
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/pipeline2')]",
@@ -591,7 +641,9 @@
 				"annotations": [],
 				"lastPublishTime": "2022-10-05T01:32:05Z"
 			},
-			"dependsOn": []
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/datasets/AzureDataExplorerTable908')]"
+			]
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/pipeline3')]",
@@ -632,7 +684,9 @@
 				"annotations": [],
 				"lastPublishTime": "2022-11-21T19:33:19Z"
 			},
-			"dependsOn": []
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/datasets/AzureDataExplorerTable1')]"
+			]
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/pipeline4')]",
@@ -673,7 +727,9 @@
 				"annotations": [],
 				"lastPublishTime": "2022-12-07T18:57:49Z"
 			},
-			"dependsOn": []
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/datasets/AzureDataExplorerTable1')]"
+			]
 		}
 	]
 }

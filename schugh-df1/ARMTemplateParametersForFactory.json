@@ -35,6 +35,12 @@
 		"AzureBlobStorage3_sasUri": {
 			"value": ""
 		},
+		"AzureBlobStorage4_sasUri": {
+			"value": ""
+		},
+		"AzureBlobStorageSAS08152023_sasUri": {
+			"value": ""
+		},
 		"AzureDataExplorer2_properties_typeProperties_endpoint": {
 			"value": "https://schughtestkusto.eastus.kusto.windows.net"
 		},

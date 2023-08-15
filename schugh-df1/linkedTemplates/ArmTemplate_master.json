@@ -47,6 +47,14 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'sasUri' of 'AzureBlobStorage3'"
 		},
+		"AzureBlobStorage4_sasUri": {
+			"type": "secureString",
+			"metadata": "Secure string for 'sasUri' of 'AzureBlobStorage4'"
+		},
+		"AzureBlobStorageSAS08152023_sasUri": {
+			"type": "secureString",
+			"metadata": "Secure string for 'sasUri' of 'AzureBlobStorageSAS08152023'"
+		},
 		"AzureDataExplorer2_properties_typeProperties_endpoint": {
 			"type": "string",
 			"defaultValue": "https://schughtestkusto.eastus.kusto.windows.net"
@@ -139,6 +147,12 @@
 					},
 					"AzureBlobStorage3_sasUri": {
 						"value": "[parameters('AzureBlobStorage3_sasUri')]"
+					},
+					"AzureBlobStorage4_sasUri": {
+						"value": "[parameters('AzureBlobStorage4_sasUri')]"
+					},
+					"AzureBlobStorageSAS08152023_sasUri": {
+						"value": "[parameters('AzureBlobStorageSAS08152023_sasUri')]"
 					},
 					"AzureDataExplorer2_properties_typeProperties_endpoint": {
 						"value": "[parameters('AzureDataExplorer2_properties_typeProperties_endpoint')]"

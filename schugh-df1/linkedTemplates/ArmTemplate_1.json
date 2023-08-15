@@ -609,6 +609,7 @@
 				"typeProperties": {
 					"location": {
 						"type": "AzureBlobStorageLocation",
+						"fileName": "Test080152023",
 						"folderPath": "eployee-sample-100",
 						"container": "test04212022"
 					},

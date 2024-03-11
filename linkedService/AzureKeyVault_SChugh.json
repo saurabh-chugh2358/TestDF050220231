@@ -1,0 +1,10 @@
+{
+	"name": "AzureKeyVault_SChugh",
+	"properties": {
+		"annotations": [],
+		"type": "AzureKeyVault",
+		"typeProperties": {
+			"baseUrl": "https://schugh-test-KV1.vault.azure.net/"
+		}
+	}
+}

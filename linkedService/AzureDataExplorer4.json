@@ -1,0 +1,21 @@
+{
+	"name": "AzureDataExplorer4",
+	"properties": {
+		"annotations": [],
+		"type": "AzureDataExplorer",
+		"typeProperties": {
+			"endpoint": "https://schughtestkusto.eastus.kusto.windows.net",
+			"tenant": "72f988bf-86f1-41af-91ab-2d7cd011db47",
+			"servicePrincipalId": "5f6921a0-a31d-48f3-8aef-76fe51aed0be",
+			"servicePrincipalKey": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVault_SChugh",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "schugh-test-cert03112024"
+			},
+			"database": "schughTestDB"
+		}
+	}
+}

@@ -1,0 +1,11 @@
+{
+	"name": "AzureBlobStorage8152025",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobStorage",
+		"typeProperties": {
+			"serviceEndpoint": "https://schughblob.blob.core.windows.net/",
+			"accountKind": "StorageV2"
+		}
+	}
+}

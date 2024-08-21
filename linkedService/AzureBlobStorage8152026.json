@@ -1,0 +1,15 @@
+{
+	"name": "AzureBlobStorage8152026",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobStorage",
+		"typeProperties": {
+			"serviceEndpoint": "https://schughblob.blob.core.windows.net/",
+			"accountKind": "StorageV2",
+			"credential": {
+				"referenceName": "schugh-test2",
+				"type": "CredentialReference"
+			}
+		}
+	}
+}

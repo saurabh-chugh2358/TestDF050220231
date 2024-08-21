@@ -1,0 +1,11 @@
+{
+	"name": "AzureBlobStorage8212024_SAMI",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobStorage",
+		"typeProperties": {
+			"serviceEndpoint": "https://schughblob.blob.core.windows.net/",
+			"accountKind": "StorageV2"
+		}
+	}
+}

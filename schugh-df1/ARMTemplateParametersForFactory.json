@@ -41,6 +41,18 @@
 		"AzureBlobStorage4_sasUri": {
 			"value": ""
 		},
+		"AzureBlobStorage8152024_sasUri": {
+			"value": ""
+		},
+		"AzureBlobStorage8152025_properties_typeProperties_serviceEndpoint": {
+			"value": "https://schughblob.blob.core.windows.net/"
+		},
+		"AzureBlobStorage8152026_properties_typeProperties_serviceEndpoint": {
+			"value": "https://schughblob.blob.core.windows.net/"
+		},
+		"AzureBlobStorage8212024_SAMI_properties_typeProperties_serviceEndpoint": {
+			"value": "https://schughblob.blob.core.windows.net/"
+		},
 		"AzureBlobStorageSAS08152023_sasUri": {
 			"value": ""
 		},
@@ -56,6 +68,18 @@
 		"AzureDataExplorer3_properties_typeProperties_database": {
 			"value": "schughTestDB"
 		},
+		"AzureDataExplorer4_properties_typeProperties_endpoint": {
+			"value": "https://schughtestkusto.eastus.kusto.windows.net"
+		},
+		"AzureDataExplorer4_properties_typeProperties_tenant": {
+			"value": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+		},
+		"AzureDataExplorer4_properties_typeProperties_servicePrincipalId": {
+			"value": "b1481f4a-ebe3-4026-873c-17e3baee734d"
+		},
+		"AzureDataExplorer4_properties_typeProperties_database": {
+			"value": "schughTestDB"
+		},
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
 			"value": "https://schughblob.dfs.core.windows.net"
 		},
@@ -64,6 +88,15 @@
 		},
 		"AzureDataLakeStorage3_sasUri": {
 			"value": ""
+		},
+		"AzureKeyVault03112024_properties_typeProperties_baseUrl": {
+			"value": "https://schugh-test-KV1.vault.azure.net/"
+		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"value": "https://schugh-test-kv1.vault.azure.net/"
+		},
+		"AzureKeyVault_SChugh_properties_typeProperties_baseUrl": {
+			"value": "https://schugh-test-KV1.vault.azure.net/"
 		},
 		"tridentKustoConnector1004_properties_typeProperties_endpoint": {
 			"value": "https://jpw7o10041620351905247.eastus2.kusto.windows.net"

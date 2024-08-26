@@ -55,6 +55,22 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'sasUri' of 'AzureBlobStorage4'"
 		},
+		"AzureBlobStorage8152024_sasUri": {
+			"type": "secureString",
+			"metadata": "Secure string for 'sasUri' of 'AzureBlobStorage8152024'"
+		},
+		"AzureBlobStorage8152025_properties_typeProperties_serviceEndpoint": {
+			"type": "string",
+			"defaultValue": "https://schughblob.blob.core.windows.net/"
+		},
+		"AzureBlobStorage8152026_properties_typeProperties_serviceEndpoint": {
+			"type": "string",
+			"defaultValue": "https://schughblob.blob.core.windows.net/"
+		},
+		"AzureBlobStorage8212024_SAMI_properties_typeProperties_serviceEndpoint": {
+			"type": "string",
+			"defaultValue": "https://schughblob.blob.core.windows.net/"
+		},
 		"AzureBlobStorageSAS08152023_sasUri": {
 			"type": "secureString",
 			"metadata": "Secure string for 'sasUri' of 'AzureBlobStorageSAS08152023'"
@@ -75,6 +91,22 @@
 			"type": "string",
 			"defaultValue": "schughTestDB"
 		},
+		"AzureDataExplorer4_properties_typeProperties_endpoint": {
+			"type": "string",
+			"defaultValue": "https://schughtestkusto.eastus.kusto.windows.net"
+		},
+		"AzureDataExplorer4_properties_typeProperties_tenant": {
+			"type": "string",
+			"defaultValue": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+		},
+		"AzureDataExplorer4_properties_typeProperties_servicePrincipalId": {
+			"type": "string",
+			"defaultValue": "b1481f4a-ebe3-4026-873c-17e3baee734d"
+		},
+		"AzureDataExplorer4_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "schughTestDB"
+		},
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://schughblob.dfs.core.windows.net"
@@ -86,6 +118,18 @@
 		"AzureDataLakeStorage3_sasUri": {
 			"type": "secureString",
 			"metadata": "Secure string for 'sasUri' of 'AzureDataLakeStorage3'"
+		},
+		"AzureKeyVault03112024_properties_typeProperties_baseUrl": {
+			"type": "string",
+			"defaultValue": "https://schugh-test-KV1.vault.azure.net/"
+		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"type": "string",
+			"defaultValue": "https://schugh-test-kv1.vault.azure.net/"
+		},
+		"AzureKeyVault_SChugh_properties_typeProperties_baseUrl": {
+			"type": "string",
+			"defaultValue": "https://schugh-test-KV1.vault.azure.net/"
 		},
 		"tridentKustoConnector1004_properties_typeProperties_endpoint": {
 			"type": "string",
@@ -122,7 +166,8 @@
 							"source": {
 								"type": "AzureDataExplorerSource",
 								"query": "Employee | take 10",
-								"queryTimeout": "00:10:00"
+								"queryTimeout": "00:10:00",
+								"noTruncation": true
 							},
 							"dataset": {
 								"referenceName": "AzureDataExplorerTable1",
@@ -133,8 +178,7 @@
 					}
 				],
 				"policy": {
-					"elapsedTimeMetric": {},
-					"cancelAfter": {}
+					"elapsedTimeMetric": {}
 				},
 				"annotations": [],
 				"lastPublishTime": "2023-01-27T04:29:23Z"
@@ -657,8 +701,7 @@
 					}
 				],
 				"policy": {
-					"elapsedTimeMetric": {},
-					"cancelAfter": {}
+					"elapsedTimeMetric": {}
 				},
 				"annotations": []
 			},
@@ -689,7 +732,8 @@
 							"source": {
 								"type": "AzureDataExplorerSource",
 								"query": "Employee | take 10",
-								"queryTimeout": "00:10:00"
+								"queryTimeout": "00:10:00",
+								"noTruncation": true
 							},
 							"sink": {
 								"type": "DelimitedTextSink",
@@ -729,8 +773,7 @@
 					}
 				],
 				"policy": {
-					"elapsedTimeMetric": {},
-					"cancelAfter": {}
+					"elapsedTimeMetric": {}
 				},
 				"annotations": [],
 				"lastPublishTime": "2023-01-26T06:00:34Z"
@@ -822,7 +865,8 @@
 							"source": {
 								"type": "AzureDataExplorerSource",
 								"query": "Employee | take 10",
-								"queryTimeout": "00:10:00"
+								"queryTimeout": "00:10:00",
+								"noTruncation": true
 							},
 							"dataset": {
 								"referenceName": "AzureDataExplorerTable1",
@@ -833,8 +877,7 @@
 					}
 				],
 				"policy": {
-					"elapsedTimeMetric": {},
-					"cancelAfter": {}
+					"elapsedTimeMetric": {}
 				},
 				"annotations": [],
 				"lastPublishTime": "2023-01-25T23:43:29Z"
@@ -904,8 +947,7 @@
 					}
 				],
 				"policy": {
-					"elapsedTimeMetric": {},
-					"cancelAfter": {}
+					"elapsedTimeMetric": {}
 				},
 				"annotations": [],
 				"lastPublishTime": "2022-08-17T20:23:30Z"
@@ -937,7 +979,8 @@
 							"source": {
 								"type": "AzureDataExplorerSource",
 								"query": "Employee | take 10",
-								"queryTimeout": "00:10:00"
+								"queryTimeout": "00:10:00",
+								"noTruncation": true
 							},
 							"sink": {
 								"type": "CosmosDbSqlApiSink",
@@ -989,7 +1032,8 @@
 							"source": {
 								"type": "AzureDataExplorerSource",
 								"query": "Employee | take 10",
-								"queryTimeout": "00:10:00"
+								"queryTimeout": "00:10:00",
+								"noTruncation": true
 							},
 							"dataset": {
 								"referenceName": "AzureDataExplorerTable1",
@@ -1016,8 +1060,7 @@
 					}
 				],
 				"policy": {
-					"elapsedTimeMetric": {},
-					"cancelAfter": {}
+					"elapsedTimeMetric": {}
 				},
 				"annotations": [],
 				"lastPublishTime": "2022-12-06T00:24:28Z"
@@ -1049,7 +1092,8 @@
 							"source": {
 								"type": "AzureDataExplorerSource",
 								"query": "Employee | take 10",
-								"queryTimeout": "00:10:00"
+								"queryTimeout": "00:10:00",
+								"noTruncation": true
 							},
 							"sink": {
 								"type": "AzureDataExplorerSink"
@@ -1081,8 +1125,7 @@
 					}
 				],
 				"policy": {
-					"elapsedTimeMetric": {},
-					"cancelAfter": {}
+					"elapsedTimeMetric": {}
 				},
 				"annotations": [],
 				"lastPublishTime": "2023-01-26T20:00:58Z"
@@ -1113,7 +1156,8 @@
 							"source": {
 								"type": "AzureDataExplorerSource",
 								"query": "Employee | take 10",
-								"queryTimeout": "00:10:00"
+								"queryTimeout": "00:10:00",
+								"noTruncation": true
 							},
 							"sink": {
 								"type": "AzureDataExplorerSink"
@@ -1145,8 +1189,7 @@
 					}
 				],
 				"policy": {
-					"elapsedTimeMetric": {},
-					"cancelAfter": {}
+					"elapsedTimeMetric": {}
 				},
 				"annotations": [],
 				"lastPublishTime": "2023-01-26T20:08:55Z"
@@ -1208,8 +1251,7 @@
 					}
 				],
 				"policy": {
-					"elapsedTimeMetric": {},
-					"cancelAfter": {}
+					"elapsedTimeMetric": {}
 				},
 				"annotations": [],
 				"lastPublishTime": "2022-12-07T18:50:17Z"
@@ -1279,8 +1321,7 @@
 					}
 				],
 				"policy": {
-					"elapsedTimeMetric": {},
-					"cancelAfter": {}
+					"elapsedTimeMetric": {}
 				},
 				"annotations": [],
 				"lastPublishTime": "2022-10-05T01:32:05Z"
@@ -1312,7 +1353,8 @@
 							"source": {
 								"type": "AzureDataExplorerSource",
 								"query": "Employee | take 10",
-								"queryTimeout": "00:10:00"
+								"queryTimeout": "00:10:00",
+								"noTruncation": true
 							},
 							"dataset": {
 								"referenceName": "AzureDataExplorerTable1",
@@ -1323,8 +1365,7 @@
 					}
 				],
 				"policy": {
-					"elapsedTimeMetric": {},
-					"cancelAfter": {}
+					"elapsedTimeMetric": {}
 				},
 				"annotations": [],
 				"lastPublishTime": "2022-11-21T19:33:19Z"
@@ -1355,7 +1396,8 @@
 							"source": {
 								"type": "AzureDataExplorerSource",
 								"query": "Employee | take 10",
-								"queryTimeout": "00:10:00"
+								"queryTimeout": "00:10:00",
+								"noTruncation": true
 							},
 							"dataset": {
 								"referenceName": "AzureDataExplorerTable1",
@@ -1366,8 +1408,7 @@
 					}
 				],
 				"policy": {
-					"elapsedTimeMetric": {},
-					"cancelAfter": {}
+					"elapsedTimeMetric": {}
 				},
 				"annotations": [],
 				"lastPublishTime": "2022-12-07T18:57:49Z"
@@ -1448,8 +1489,7 @@
 					}
 				],
 				"policy": {
-					"elapsedTimeMetric": {},
-					"cancelAfter": {}
+					"elapsedTimeMetric": {}
 				},
 				"annotations": []
 			},
@@ -2630,6 +2670,67 @@
 			"dependsOn": []
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/AzureBlobStorage8152024')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureBlobStorage",
+				"typeProperties": {
+					"sasUri": "[parameters('AzureBlobStorage8152024_sasUri')]"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/AzureBlobStorage8152025')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureBlobStorage",
+				"typeProperties": {
+					"serviceEndpoint": "[parameters('AzureBlobStorage8152025_properties_typeProperties_serviceEndpoint')]",
+					"accountKind": "StorageV2"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/AzureBlobStorage8152026')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureBlobStorage",
+				"typeProperties": {
+					"serviceEndpoint": "[parameters('AzureBlobStorage8152026_properties_typeProperties_serviceEndpoint')]",
+					"accountKind": "StorageV2",
+					"credential": {
+						"referenceName": "schugh-test2",
+						"type": "CredentialReference"
+					}
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/credentials/schugh-test2')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/AzureBlobStorage8212024_SAMI')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureBlobStorage",
+				"typeProperties": {
+					"serviceEndpoint": "[parameters('AzureBlobStorage8212024_SAMI_properties_typeProperties_serviceEndpoint')]",
+					"accountKind": "StorageV2"
+				}
+			},
+			"dependsOn": []
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/AzureBlobStorageSAS08152023')]",
 			"type": "Microsoft.DataFactory/factories/linkedServices",
 			"apiVersion": "2018-06-01",
@@ -2677,10 +2778,37 @@
 			]
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/AzureDataExplorer4')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureDataExplorer",
+				"typeProperties": {
+					"endpoint": "[parameters('AzureDataExplorer4_properties_typeProperties_endpoint')]",
+					"tenant": "[parameters('AzureDataExplorer4_properties_typeProperties_tenant')]",
+					"servicePrincipalId": "[parameters('AzureDataExplorer4_properties_typeProperties_servicePrincipalId')]",
+					"servicePrincipalKey": {
+						"type": "AzureKeyVaultSecret",
+						"store": {
+							"referenceName": "AzureKeyVault_SChugh",
+							"type": "LinkedServiceReference"
+						},
+						"secretName": "schugh0test-cert1"
+					},
+					"database": "[parameters('AzureDataExplorer4_properties_typeProperties_database')]"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/AzureKeyVault_SChugh')]"
+			]
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/AzureDataLakeStorage1')]",
 			"type": "Microsoft.DataFactory/factories/linkedServices",
 			"apiVersion": "2018-06-01",
 			"properties": {
+				"description": "upd",
 				"annotations": [],
 				"type": "AzureBlobFS",
 				"typeProperties": {
@@ -2715,6 +2843,45 @@
 				"type": "AzureBlobFS",
 				"typeProperties": {
 					"sasUri": "[parameters('AzureDataLakeStorage3_sasUri')]"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/AzureKeyVault03112024')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureKeyVault",
+				"typeProperties": {
+					"baseUrl": "[parameters('AzureKeyVault03112024_properties_typeProperties_baseUrl')]"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/AzureKeyVault1')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureKeyVault",
+				"typeProperties": {
+					"baseUrl": "[parameters('AzureKeyVault1_properties_typeProperties_baseUrl')]"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/AzureKeyVault_SChugh')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureKeyVault",
+				"typeProperties": {
+					"baseUrl": "[parameters('AzureKeyVault_SChugh_properties_typeProperties_baseUrl')]"
 				}
 			},
 			"dependsOn": []

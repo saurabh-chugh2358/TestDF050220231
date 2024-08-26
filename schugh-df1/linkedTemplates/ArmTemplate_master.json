@@ -55,6 +55,22 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'sasUri' of 'AzureBlobStorage4'"
 		},
+		"AzureBlobStorage8152024_sasUri": {
+			"type": "secureString",
+			"metadata": "Secure string for 'sasUri' of 'AzureBlobStorage8152024'"
+		},
+		"AzureBlobStorage8152025_properties_typeProperties_serviceEndpoint": {
+			"type": "string",
+			"defaultValue": "https://schughblob.blob.core.windows.net/"
+		},
+		"AzureBlobStorage8152026_properties_typeProperties_serviceEndpoint": {
+			"type": "string",
+			"defaultValue": "https://schughblob.blob.core.windows.net/"
+		},
+		"AzureBlobStorage8212024_SAMI_properties_typeProperties_serviceEndpoint": {
+			"type": "string",
+			"defaultValue": "https://schughblob.blob.core.windows.net/"
+		},
 		"AzureBlobStorageSAS08152023_sasUri": {
 			"type": "secureString",
 			"metadata": "Secure string for 'sasUri' of 'AzureBlobStorageSAS08152023'"
@@ -75,6 +91,22 @@
 			"type": "string",
 			"defaultValue": "schughTestDB"
 		},
+		"AzureDataExplorer4_properties_typeProperties_endpoint": {
+			"type": "string",
+			"defaultValue": "https://schughtestkusto.eastus.kusto.windows.net"
+		},
+		"AzureDataExplorer4_properties_typeProperties_tenant": {
+			"type": "string",
+			"defaultValue": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+		},
+		"AzureDataExplorer4_properties_typeProperties_servicePrincipalId": {
+			"type": "string",
+			"defaultValue": "b1481f4a-ebe3-4026-873c-17e3baee734d"
+		},
+		"AzureDataExplorer4_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "schughTestDB"
+		},
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://schughblob.dfs.core.windows.net"
@@ -86,6 +118,18 @@
 		"AzureDataLakeStorage3_sasUri": {
 			"type": "secureString",
 			"metadata": "Secure string for 'sasUri' of 'AzureDataLakeStorage3'"
+		},
+		"AzureKeyVault03112024_properties_typeProperties_baseUrl": {
+			"type": "string",
+			"defaultValue": "https://schugh-test-KV1.vault.azure.net/"
+		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"type": "string",
+			"defaultValue": "https://schugh-test-kv1.vault.azure.net/"
+		},
+		"AzureKeyVault_SChugh_properties_typeProperties_baseUrl": {
+			"type": "string",
+			"defaultValue": "https://schugh-test-KV1.vault.azure.net/"
 		},
 		"tridentKustoConnector1004_properties_typeProperties_endpoint": {
 			"type": "string",
@@ -146,17 +190,20 @@
 					"CosmosDb1_connectionString": {
 						"value": "[parameters('CosmosDb1_connectionString')]"
 					},
-					"CosmosDb2_connectionString": {
-						"value": "[parameters('CosmosDb2_connectionString')]"
-					},
-					"CosmosDb3_connectionString": {
-						"value": "[parameters('CosmosDb3_connectionString')]"
-					},
 					"AzureBlobStorage3_sasUri": {
 						"value": "[parameters('AzureBlobStorage3_sasUri')]"
 					},
 					"AzureBlobStorage4_sasUri": {
 						"value": "[parameters('AzureBlobStorage4_sasUri')]"
+					},
+					"AzureBlobStorage8152024_sasUri": {
+						"value": "[parameters('AzureBlobStorage8152024_sasUri')]"
+					},
+					"AzureBlobStorage8152025_properties_typeProperties_serviceEndpoint": {
+						"value": "[parameters('AzureBlobStorage8152025_properties_typeProperties_serviceEndpoint')]"
+					},
+					"AzureBlobStorage8212024_SAMI_properties_typeProperties_serviceEndpoint": {
+						"value": "[parameters('AzureBlobStorage8212024_SAMI_properties_typeProperties_serviceEndpoint')]"
 					},
 					"AzureBlobStorageSAS08152023_sasUri": {
 						"value": "[parameters('AzureBlobStorageSAS08152023_sasUri')]"
@@ -175,6 +222,15 @@
 					},
 					"AzureDataLakeStorage3_sasUri": {
 						"value": "[parameters('AzureDataLakeStorage3_sasUri')]"
+					},
+					"AzureKeyVault03112024_properties_typeProperties_baseUrl": {
+						"value": "[parameters('AzureKeyVault03112024_properties_typeProperties_baseUrl')]"
+					},
+					"AzureKeyVault1_properties_typeProperties_baseUrl": {
+						"value": "[parameters('AzureKeyVault1_properties_typeProperties_baseUrl')]"
+					},
+					"AzureKeyVault_SChugh_properties_typeProperties_baseUrl": {
+						"value": "[parameters('AzureKeyVault_SChugh_properties_typeProperties_baseUrl')]"
 					}
 				}
 			},
@@ -194,17 +250,14 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
-					"AzureDataExplorer3_properties_typeProperties_endpoint": {
-						"value": "[parameters('AzureDataExplorer3_properties_typeProperties_endpoint')]"
+					"CosmosDb2_connectionString": {
+						"value": "[parameters('CosmosDb2_connectionString')]"
 					},
-					"AzureDataExplorer3_properties_typeProperties_database": {
-						"value": "[parameters('AzureDataExplorer3_properties_typeProperties_database')]"
+					"CosmosDb3_connectionString": {
+						"value": "[parameters('CosmosDb3_connectionString')]"
 					},
-					"tridentKustoConnector1004_properties_typeProperties_endpoint": {
-						"value": "[parameters('tridentKustoConnector1004_properties_typeProperties_endpoint')]"
-					},
-					"tridentKustoConnector1004_properties_typeProperties_database": {
-						"value": "[parameters('tridentKustoConnector1004_properties_typeProperties_database')]"
+					"AzureBlobStorage8152026_properties_typeProperties_serviceEndpoint": {
+						"value": "[parameters('AzureBlobStorage8152026_properties_typeProperties_serviceEndpoint')]"
 					}
 				}
 			},
@@ -225,6 +278,30 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					},
+					"AzureDataExplorer3_properties_typeProperties_endpoint": {
+						"value": "[parameters('AzureDataExplorer3_properties_typeProperties_endpoint')]"
+					},
+					"AzureDataExplorer3_properties_typeProperties_database": {
+						"value": "[parameters('AzureDataExplorer3_properties_typeProperties_database')]"
+					},
+					"AzureDataExplorer4_properties_typeProperties_endpoint": {
+						"value": "[parameters('AzureDataExplorer4_properties_typeProperties_endpoint')]"
+					},
+					"AzureDataExplorer4_properties_typeProperties_tenant": {
+						"value": "[parameters('AzureDataExplorer4_properties_typeProperties_tenant')]"
+					},
+					"AzureDataExplorer4_properties_typeProperties_servicePrincipalId": {
+						"value": "[parameters('AzureDataExplorer4_properties_typeProperties_servicePrincipalId')]"
+					},
+					"AzureDataExplorer4_properties_typeProperties_database": {
+						"value": "[parameters('AzureDataExplorer4_properties_typeProperties_database')]"
+					},
+					"tridentKustoConnector1004_properties_typeProperties_endpoint": {
+						"value": "[parameters('tridentKustoConnector1004_properties_typeProperties_endpoint')]"
+					},
+					"tridentKustoConnector1004_properties_typeProperties_database": {
+						"value": "[parameters('tridentKustoConnector1004_properties_typeProperties_database')]"
 					}
 				}
 			},

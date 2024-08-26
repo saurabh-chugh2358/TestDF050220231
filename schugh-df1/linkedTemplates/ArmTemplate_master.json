@@ -139,6 +139,14 @@
 			"type": "string",
 			"defaultValue": "7beb189a3b2d492faa44eabdfb5993a8"
 		},
+		"AzureDataExplorer08212024_1_properties_typeProperties_endpoint": {
+			"type": "string",
+			"defaultValue": "https://schughtestkusto.eastus.kusto.windows.net"
+		},
+		"AzureDataExplorer08212024_1_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "Employee"
+		},
 		"containerUri": {
 			"type": "string",
 			"metadata": "URI to storage account containing linked ARM templates"
@@ -256,8 +264,11 @@
 					"CosmosDb3_connectionString": {
 						"value": "[parameters('CosmosDb3_connectionString')]"
 					},
-					"AzureBlobStorage8152026_properties_typeProperties_serviceEndpoint": {
-						"value": "[parameters('AzureBlobStorage8152026_properties_typeProperties_serviceEndpoint')]"
+					"AzureDataExplorer08212024_1_properties_typeProperties_endpoint": {
+						"value": "[parameters('AzureDataExplorer08212024_1_properties_typeProperties_endpoint')]"
+					},
+					"AzureDataExplorer08212024_1_properties_typeProperties_database": {
+						"value": "[parameters('AzureDataExplorer08212024_1_properties_typeProperties_database')]"
 					}
 				}
 			},
@@ -278,6 +289,9 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					},
+					"AzureBlobStorage8152026_properties_typeProperties_serviceEndpoint": {
+						"value": "[parameters('AzureBlobStorage8152026_properties_typeProperties_serviceEndpoint')]"
 					},
 					"AzureDataExplorer3_properties_typeProperties_endpoint": {
 						"value": "[parameters('AzureDataExplorer3_properties_typeProperties_endpoint')]"
@@ -307,6 +321,26 @@
 			},
 			"dependsOn": [
 				"[resourceId('Microsoft.Resources/deployments', 'schugh-df1_ArmTemplate_1')]"
+			]
+		},
+		{
+			"name": "schugh-df1_ArmTemplate_3",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_3.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'schugh-df1_ArmTemplate_2')]"
 			]
 		}
 	]

@@ -15,9 +15,13 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'CosmosDb3'"
 		},
-		"AzureBlobStorage8152026_properties_typeProperties_serviceEndpoint": {
+		"AzureDataExplorer08212024_1_properties_typeProperties_endpoint": {
 			"type": "string",
-			"defaultValue": "https://schughblob.blob.core.windows.net/"
+			"defaultValue": "https://schughtestkusto.eastus.kusto.windows.net"
+		},
+		"AzureDataExplorer08212024_1_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "Employee"
 		}
 	},
 	"variables": {
@@ -130,6 +134,20 @@
 			"type": "Microsoft.DataFactory/factories/managedVirtualNetworks",
 			"apiVersion": "2018-06-01",
 			"properties": {},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/AzureDataExplorer08212024_1')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureDataExplorer",
+				"typeProperties": {
+					"endpoint": "[parameters('AzureDataExplorer08212024_1_properties_typeProperties_endpoint')]",
+					"database": "[parameters('AzureDataExplorer08212024_1_properties_typeProperties_database')]"
+				}
+			},
 			"dependsOn": []
 		},
 		{
@@ -1179,26 +1197,6 @@
 				]
 			},
 			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/AzureBlobStorage8152026')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "AzureBlobStorage",
-				"typeProperties": {
-					"serviceEndpoint": "[parameters('AzureBlobStorage8152026_properties_typeProperties_serviceEndpoint')]",
-					"accountKind": "StorageV2",
-					"credential": {
-						"referenceName": "schugh-test2",
-						"type": "CredentialReference"
-					}
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/credentials/schugh-test2')]"
-			]
 		}
 	]
 }

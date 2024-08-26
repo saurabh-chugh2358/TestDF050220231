@@ -104,6 +104,12 @@
 		"tridentKustoConnector1004_properties_typeProperties_database": {
 			"value": "7beb189a3b2d492faa44eabdfb5993a8"
 		},
+		"AzureDataExplorer08212024_1_properties_typeProperties_endpoint": {
+			"value": "https://schughtestkusto.eastus.kusto.windows.net"
+		},
+		"AzureDataExplorer08212024_1_properties_typeProperties_database": {
+			"value": "Employee"
+		},
 		"containerUri": {
 			"value": ""
 		},

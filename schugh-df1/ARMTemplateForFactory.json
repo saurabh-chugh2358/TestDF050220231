@@ -138,6 +138,14 @@
 		"tridentKustoConnector1004_properties_typeProperties_database": {
 			"type": "string",
 			"defaultValue": "7beb189a3b2d492faa44eabdfb5993a8"
+		},
+		"AzureDataExplorer08212024_1_properties_typeProperties_endpoint": {
+			"type": "string",
+			"defaultValue": "https://schughtestkusto.eastus.kusto.windows.net"
+		},
+		"AzureDataExplorer08212024_1_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "Employee"
 		}
 	},
 	"variables": {
@@ -3116,6 +3124,20 @@
 			"type": "Microsoft.DataFactory/factories/managedVirtualNetworks",
 			"apiVersion": "2018-06-01",
 			"properties": {},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/AzureDataExplorer08212024_1')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureDataExplorer",
+				"typeProperties": {
+					"endpoint": "[parameters('AzureDataExplorer08212024_1_properties_typeProperties_endpoint')]",
+					"database": "[parameters('AzureDataExplorer08212024_1_properties_typeProperties_database')]"
+				}
+			},
 			"dependsOn": []
 		}
 	]

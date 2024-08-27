@@ -6,6 +6,7 @@
 		"typeProperties": {
 			"serviceEndpoint": "https://schughblob.blob.core.windows.net/",
 			"accountKind": "StorageV2"
-		}
+		},
+		"description": "upd"
 	}
 }

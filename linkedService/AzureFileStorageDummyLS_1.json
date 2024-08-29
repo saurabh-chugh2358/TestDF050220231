@@ -1,0 +1,10 @@
+{
+	"name": "AzureFileStorageDummyLS_1",
+	"properties": {
+		"annotations": [],
+		"type": "AzureFileStorage",
+		"typeProperties": {
+			"fileShare": "dummyFile"
+		}
+	}
+}

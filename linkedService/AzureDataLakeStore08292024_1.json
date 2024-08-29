@@ -1,0 +1,13 @@
+{
+	"name": "AzureDataLakeStore08292024_1",
+	"properties": {
+		"annotations": [],
+		"type": "AzureDataLakeStore",
+		"typeProperties": {
+			"dataLakeStoreUri": "https://azureanalytics-data1-c14.azuredatalakestore.net/webhdfs/v1",
+			"tenant": "72f988bf-86f1-41af-91ab-2d7cd011db47",
+			"subscriptionId": "8c4b5b03-3b24-4ed0-91f5-a703cd91b412",
+			"resourceGroupName": "conv"
+		}
+	}
+}

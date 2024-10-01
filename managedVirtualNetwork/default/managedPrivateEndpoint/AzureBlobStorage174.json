@@ -1,0 +1,7 @@
+{
+	"name": "AzureBlobStorage174",
+	"properties": {
+		"privateLinkResourceId": "/subscriptions/d3bb3b2e-9a7e-4194-9960-5171bd192117/resourceGroups/saurabhchugh-rg/providers/Microsoft.Storage/storageAccounts/schughblob",
+		"groupId": "blob"
+	}
+}
